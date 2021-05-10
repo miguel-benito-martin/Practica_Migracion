@@ -1,0 +1,3 @@
+jdbc:mysql://localhost:13306/gestionasignaturas
+root
+1234
