@@ -1,0 +1,297 @@
+@startuml
+
+title __CAPALOGICANEGOCIO's Class Diagram__\n
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Alumno {
+        - apellidos : String
+        - dni : String
+        - n_mat : String
+        - nombre : String
+        + Alumno()
+        + Alumno()
+        + Alumno()
+        + Alumno()
+        + actualizarAlumnos()
+        + altaAlumno()
+        + altaMasivaAlumnos()
+        + bajaAlumno()
+        + cambioAConvocatoriaExtraordinaria()
+        + consultarAlumno()
+        + consultarHistoricoAlumno()
+        + estaDadoDeAlta()
+        + getApellidos()
+        + getDNI()
+        + getN_Mat()
+        + getNombre()
+        + noEstaDadoDeAlta()
+        + obtenerDatosAlumno()
+        + obtenerDatosAlumno()
+        - estaDadoDeAltaEnCursoActual()
+        - estaVacio()
+        - numMatriculaEstaDadaDeAlta()
+        - numMatriculaEstaDadaDeAltaEnCursoActual()
+        - validarCampos()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Convocatoria {
+        - actual : int
+        - cod_convocatoria : String
+        {static} - convocatoria_actual : String
+        + BackUpConvocatoria()
+        + Convocatoria()
+        + Convocatoria()
+        + Convocatoria()
+        + cambioConvocatoria()
+        + getActual()
+        + getConvocatoria()
+        + getConvocatoriaActual()
+        + recuperarConvocatoriaActual()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Curso {
+        - actual : int
+        - cod_curso : int
+        {static} - curso_actual : int
+        + BackUpCurso()
+        + Curso()
+        + Curso()
+        + Curso()
+        + cambioCurso()
+        + cambioCursoAnterior()
+        + getActual()
+        + getCurso()
+        + getCursoActual()
+        + getCursoActualEnString()
+        + getCursoEnString()
+        + recuperarCursoActual()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Evaluacion {
+        - cod_convocatoria : String
+        - cod_curso : int
+        - cod_evaluacion : int
+        - cod_examen : String
+        - cod_grupo_practicas : int
+        - cod_practica : String
+        {static} - cod_ultima_evaluacion : int
+        - dni_alumno : String
+        - ev_continua : boolean
+        - examen_convalidado : boolean
+        - n_mat_alumno : String
+        - nota_ev_c : float
+        - nota_ex : float
+        - nota_final : float
+        - nota_p1 : float
+        - nota_p2 : float
+        - nota_p3 : float
+        - nota_p4 : float
+        - nota_pr : float
+        - practica_convalidada : boolean
+        + Evaluacion()
+        + Evaluacion()
+        + Evaluacion()
+        + Evaluacion()
+        + Evaluacion()
+        + actualizarNotasAprobadasConvocatoriaAnterior()
+        + actualizarNotasEvaluaciones()
+        + altaEvaluacion()
+        + codEvaluacion()
+        + consultarEvaluacion()
+        + eliminarEvaluacionesConvocatoriaActual()
+        + eliminarEvaluacionesConvocatoriaActual()
+        + getCodUltimaEvaluacion()
+        + getCod_Convocatoria()
+        + getCod_Curso()
+        + getCod_Examen()
+        + getCod_Practica()
+        + getDNI()
+        + getEs_Ev_Continua()
+        + getExamenConvalidado()
+        + getGrupo_Practica()
+        + getN_Mat()
+        + getNota_Ev_C()
+        + getNota_Ex()
+        + getNota_Final()
+        + getNota_P1()
+        + getNota_P2()
+        + getNota_P3()
+        + getNota_P4()
+        + getNota_Practica()
+        + getNuevoCodEvaluacion()
+        + getPracticaConvalidada()
+        + recuperarUltimoCodEvaluacion()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Examen {
+        + Examen()
+        + altaNuevoCodExamen()
+        + bajaCodExamenConvocatoriaActual()
+        + bajaCodExamenConvocatoriaActual()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.GrupoClase {
+        - cod_grupo_clase : String
+        + GrupoClase()
+        + altaGrupoClase()
+        + altaGrupoClase()
+        + estaDadoDeAlta()
+        + getCodGrupoClase()
+        + noEstaDadoDeAlta()
+        + noEstaDadoDeAlta()
+        + validarGrupoClase()
+        - noEstaVacio()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.GrupoPractica {
+        - cod_grupo : int
+        - nota : float
+        + GrupoPractica()
+        + GrupoPractica()
+        + GrupoPractica()
+        + GrupoPractica()
+        + GrupoPractica()
+        + actualizarGruposPracticas()
+        + altaGrupoPractica()
+        + bajaGrupoPractica()
+        + consultarGrupoPractica()
+        + desactivarGruposPracticas()
+        + getAlumno1()
+        + getAlumno2()
+        + getCodGrupoPractica()
+        + getNota()
+        + getTutor()
+        + reactivarGruposPracticasEnUsoEnConvocatoriaActual()
+        + reactivarGruposPracticasEnUsoEnConvocatoriaActual()
+        + validarCampos()
+        - estaVacio()
+        - noEstaVacio()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Matricula {
+        {static} - cod_ultima_matricula : int
+        - curso : int
+        - dni_alumno : String
+        + Matricula()
+        + Matricula()
+        + altaMatricula()
+        + eliminarMatriculasCursoActual()
+        + getCodUltimaMatricula()
+        + getCod_Curso()
+        + getDNI()
+        + getGrupo_Clase()
+        + getNuevoCodMatricula()
+        + recuperarUltimoCodMatricula()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Practica {
+        + Practica()
+        + altaNuevoCodPractica()
+        + bajaCodPracticaConvocatoriaActual()
+        + bajaCodPracticaConvocatoriaActual()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Profesor {
+        - apellidos : String
+        {static} - clave_ultimo_profesor : int
+        - cod_profesor : int
+        - nombre : String
+        + Profesor()
+        + Profesor()
+        + Profesor()
+        + Profesor()
+        + Profesor()
+        + actualizarProfesores()
+        + altaProfesor()
+        + bajaProfesor()
+        + consultarProfesor()
+        + eliminarImparticionesCursoActual()
+        + getApellidos()
+        + getClaveUltimoProfesor()
+        + getCodProfesor()
+        + getGrupoClase1()
+        + getGrupoClase2()
+        + getNombre()
+        + getNuevaClaveProfesor()
+        + obtenerDatos()
+        + obtenerDatos()
+        + reactivarProfesoresConRegistrosEnConvocatoriaActual()
+        + recuperarUltimoCodProfesor()
+        + tieneTutorias()
+        - estaVacio()
+        - noEstaVacio()
+        - validarCampos()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.TipoEvaluacion {
+        - ev_c : boolean
+        - peso_evC : float
+        - peso_ex : float
+        - peso_pr : float
+        + TipoEvaluacion()
+        + getPesoEvC()
+        + getPesoEx()
+        + getPesoPr()
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Tutoria {
+        {static} - cod_ultima_tutoria : int
+        + Tutoria()
+        + eliminarTutoriasConvocatoriaActual()
+        + getCodUltimaTutoria()
+        + getNuevoCodTutoria()
+        + recuperarUltimoCodTutoria()
+    }
+  }
+  
+
+  capaLogicaNegocio.Evaluacion o-- capaLogicaNegocio.TipoEvaluacion : tipo_evaluacion
+  capaLogicaNegocio.GrupoPractica o-- capaLogicaNegocio.Alumno : alumno1
+  capaLogicaNegocio.GrupoPractica o-- capaLogicaNegocio.Alumno : alumno2
+  capaLogicaNegocio.GrupoPractica o-- capaLogicaNegocio.Profesor : tutor
+  capaLogicaNegocio.Matricula o-- capaLogicaNegocio.GrupoClase : grupo_clase
+  capaLogicaNegocio.Profesor o-- capaLogicaNegocio.GrupoClase : grupo_clase1
+  capaLogicaNegocio.Profesor o-- capaLogicaNegocio.GrupoClase : grupo_clase2
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

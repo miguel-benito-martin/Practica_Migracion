@@ -1,0 +1,801 @@
+@startuml
+
+title __GESTIONASIGNATURAS - CODIGOFUENTE's Class Diagram__\n
+
+  namespace capaDatos {
+    class capaDatos.ControladorAlumno {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorConvocatoria {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorCurso {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorEvaluacion {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorExamen {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorGrupoClase {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorGrupoPractica {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorMatricula {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorPractica {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorProfesor {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorTutoria {
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.DataAccessObject {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    class capaInterfaz.JBarraMenus {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    class capaInterfaz.JButtonOp {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    class capaInterfaz.JDialogAboutBox {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    class capaInterfaz.JDialogOperacionFail {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    class capaInterfaz.JDialogOperacionOK {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    class capaInterfaz.JDialogOperacionWarning {
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace MenuHistoricoAlumnos {
+      class capaInterfaz.MenuHistoricoAlumnos.PanelMenuConsultarHistoricoAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace MenuHistoricoAlumnos {
+      class capaInterfaz.MenuHistoricoAlumnos.PanelMenuHistoricoAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace MenuHistoricoAlumnos {
+      class capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerCargarTxtAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarCSVCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtGrupoPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtHistoricoAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.FrameEscogerCaracterSeparador {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ManejadorFichero {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace listados {
+      class capaInterfaz.listados.ListadoAlumno {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace listados {
+      class capaInterfaz.listados.ListadoEvaluacion {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace listados {
+      class capaInterfaz.listados.ListadoGrupoPractica {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace listados {
+      class capaInterfaz.listados.ListadoHistoricoAlumno {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace listados {
+      class capaInterfaz.listados.ListadoProfesor {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.FrameSeleccionarFichero {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAltaAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosIndividual {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuBajaAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuConsultarAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuModificarAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelMenuCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelMenuConsultarCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelMenuModificarCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuConfiguracion {
+      class capaInterfaz.menuConfiguracion.JDialogMenuConfiguracion {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuConfiguracion {
+      class capaInterfaz.menuConfiguracion.JDialogMenuSeleccionarBDD {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuConfiguracion {
+      class capaInterfaz.menuConfiguracion.JDialogMenuSeleccionarBDDPrimeraVez {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.FrameEscogerTutor {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuAltaGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuBajaGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuConsultarGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuModificarGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuPrincipal {
+      class capaInterfaz.menuPrincipal.FrameMenuPrincipal {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuPrincipal {
+      class capaInterfaz.menuPrincipal.PanelMenuPrincipal {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuAltaProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuBajaProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuConsultarProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuModificarProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelResultadoBajaProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelResultadoModificarProfesores {
+      }
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Alumno {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Convocatoria {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Curso {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Evaluacion {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Examen {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.GrupoClase {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.GrupoPractica {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Matricula {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Practica {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Profesor {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.TipoEvaluacion {
+    }
+  }
+  
+
+  namespace capaLogicaNegocio {
+    class capaLogicaNegocio.Tutoria {
+    }
+  }
+  
+
+  namespace euinotes {
+    class euinotes.Main {
+    }
+  }
+  
+
+  capaInterfaz.JBarraMenus .up.|> java.awt.event.ActionListener
+  capaInterfaz.JBarraMenus -up-|> javax.swing.JMenuBar
+  capaInterfaz.JButtonOp -up-|> javax.swing.JButton
+  capaInterfaz.JDialogAboutBox -up-|> javax.swing.JDialog
+  capaInterfaz.JDialogOperacionFail -up-|> javax.swing.JDialog
+  capaInterfaz.JDialogOperacionOK -up-|> javax.swing.JDialog
+  capaInterfaz.JDialogOperacionWarning -up-|> javax.swing.JDialog
+  capaInterfaz.MenuHistoricoAlumnos.PanelMenuConsultarHistoricoAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.MenuHistoricoAlumnos.PanelMenuConsultarHistoricoAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.MenuHistoricoAlumnos.PanelMenuHistoricoAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.MenuHistoricoAlumnos.PanelMenuHistoricoAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.ficheros.ActionListenerCargarTxtAlumnos o-- capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero : panel
+  capaInterfaz.ficheros.ActionListenerGuardarCSVCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarCSVCalificaciones o-- capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones : panelResultadoConsultarCalificaciones
+  capaInterfaz.ficheros.ActionListenerGuardarTxtAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtAlumnos o-- capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos : panelResultadoConsultarAlumnos
+  capaInterfaz.ficheros.ActionListenerGuardarTxtCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtCalificaciones o-- capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones : panelResultadoConsultarCalificaciones
+  capaInterfaz.ficheros.ActionListenerGuardarTxtGrupoPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtGrupoPracticas o-- capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas : panelResultadoConsultaGruposPracticas
+  capaInterfaz.ficheros.ActionListenerGuardarTxtHistoricoAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtHistoricoAlumnos o-- capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos : panelResultadoConsultarHistoricoAlumnos
+  capaInterfaz.ficheros.ActionListenerGuardarTxtProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtProfesores o-- capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores : panelResultadoConsultarProfesores
+  capaInterfaz.ficheros.FrameEscogerCaracterSeparador .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.FrameEscogerCaracterSeparador -up-|> javax.swing.JDialog
+  capaInterfaz.ficheros.FrameEscogerCaracterSeparador o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.listados.ListadoAlumno o-- capaLogicaNegocio.GrupoClase : grupo_clase
+  capaInterfaz.listados.ListadoEvaluacion o-- capaLogicaNegocio.Alumno : alumno
+  capaInterfaz.listados.ListadoEvaluacion o-- capaLogicaNegocio.Convocatoria : convocatoria
+  capaInterfaz.listados.ListadoEvaluacion o-- capaLogicaNegocio.Curso : curso
+  capaInterfaz.listados.ListadoEvaluacion o-- capaLogicaNegocio.Evaluacion : evaluacion
+  capaInterfaz.listados.ListadoGrupoPractica o-- capaLogicaNegocio.Alumno : alumno1
+  capaInterfaz.listados.ListadoGrupoPractica o-- capaLogicaNegocio.Alumno : alumno2
+  capaInterfaz.listados.ListadoGrupoPractica o-- capaLogicaNegocio.Profesor : tutor
+  capaInterfaz.listados.ListadoHistoricoAlumno o-- capaLogicaNegocio.Alumno : alumno
+  capaInterfaz.listados.ListadoProfesor o-- capaLogicaNegocio.GrupoClase : grupo_clase1
+  capaInterfaz.listados.ListadoProfesor o-- capaLogicaNegocio.GrupoClase : grupo_clase2
+  capaInterfaz.menuAlumnos.FrameSeleccionarFichero -up-|> javax.swing.JFrame
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosIndividual .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosIndividual -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuBajaAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuBajaAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuConsultarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuConsultarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuModificarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuModificarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos o-- capaInterfaz.JButtonOp : botonDelete
+  capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos o-- capaInterfaz.JButtonOp : botonSaveChanges
+  capaInterfaz.menuCalificaciones.PanelMenuCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelMenuCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelMenuConsultarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelMenuConsultarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelMenuModificarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelMenuModificarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonGenerarCSV
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonHome
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones o-- capaInterfaz.JButtonOp : botonHome
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones o-- capaInterfaz.JButtonOp : botonSaveChanges
+  capaInterfaz.menuConfiguracion.JDialogMenuConfiguracion -up-|> javax.swing.JDialog
+  capaInterfaz.menuConfiguracion.JDialogMenuSeleccionarBDD -up-|> javax.swing.JDialog
+  capaInterfaz.menuConfiguracion.JDialogMenuSeleccionarBDDPrimeraVez -up-|> javax.swing.JDialog
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor -up-|> javax.swing.JDialog
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor o-- capaInterfaz.JButtonOp : botonChoose
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor o-- capaLogicaNegocio.Profesor : tutor
+  capaInterfaz.menuGruposPracticas.PanelMenuAltaGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuAltaGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuBajaGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuBajaGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuConsultarGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuConsultarGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuModificarGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuModificarGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas o-- capaInterfaz.JButtonOp : botonDelete
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor o-- capaInterfaz.JButtonOp : botonChoose
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor o-- capaLogicaNegocio.Profesor : tutor
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas o-- capaInterfaz.JButtonOp : botonSaveChanges
+  capaInterfaz.menuPrincipal.FrameMenuPrincipal -up-|> javax.swing.JFrame
+  capaInterfaz.menuPrincipal.FrameMenuPrincipal o-- capaInterfaz.menuPrincipal.PanelMenuPrincipal : pMenuPrincipal
+  capaInterfaz.menuPrincipal.PanelMenuPrincipal .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuPrincipal.PanelMenuPrincipal -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuAltaProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuAltaProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuBajaProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuBajaProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuConsultarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuConsultarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuModificarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuModificarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores o-- capaInterfaz.JButtonOp : botonDelete
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores o-- capaInterfaz.JButtonOp : botonSaveChanges
+  capaLogicaNegocio.Evaluacion o-- capaLogicaNegocio.TipoEvaluacion : tipo_evaluacion
+  capaLogicaNegocio.GrupoPractica o-- capaLogicaNegocio.Alumno : alumno1
+  capaLogicaNegocio.GrupoPractica o-- capaLogicaNegocio.Alumno : alumno2
+  capaLogicaNegocio.GrupoPractica o-- capaLogicaNegocio.Profesor : tutor
+  capaLogicaNegocio.Matricula o-- capaLogicaNegocio.GrupoClase : grupo_clase
+  capaLogicaNegocio.Profesor o-- capaLogicaNegocio.GrupoClase : grupo_clase1
+  capaLogicaNegocio.Profesor o-- capaLogicaNegocio.GrupoClase : grupo_clase2
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

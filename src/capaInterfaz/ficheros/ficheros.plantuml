@@ -1,0 +1,150 @@
+@startuml
+
+title __FICHEROS's Class Diagram__\n
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerCargarTxtAlumnos {
+          + ActionListenerCargarTxtAlumnos()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarCSVCalificaciones {
+          {static} + separador : char
+          + ActionListenerGuardarCSVCalificaciones()
+          + ActionListenerGuardarCSVCalificaciones()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtAlumnos {
+          {static} + separador : char
+          + ActionListenerGuardarTxtAlumnos()
+          + ActionListenerGuardarTxtAlumnos()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtCalificaciones {
+          {static} + separador : char
+          + ActionListenerGuardarTxtCalificaciones()
+          + ActionListenerGuardarTxtCalificaciones()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtGrupoPracticas {
+          {static} + separador : char
+          + ActionListenerGuardarTxtGrupoPracticas()
+          + ActionListenerGuardarTxtGrupoPracticas()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtHistoricoAlumnos {
+          {static} + separador : char
+          + ActionListenerGuardarTxtHistoricoAlumnos()
+          + ActionListenerGuardarTxtHistoricoAlumnos()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ActionListenerGuardarTxtProfesores {
+          {static} + separador : char
+          + ActionListenerGuardarTxtProfesores()
+          + ActionListenerGuardarTxtProfesores()
+          + actionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.FrameEscogerCaracterSeparador {
+          {static} - GUARDAR_CARACTER_ESCOGIDO : int
+          - arraycaracter : char[]
+          - arrayradio : ArrayList<JRadioButton>
+          - grupoRadios : ButtonGroup
+          + FrameEscogerCaracterSeparador()
+          + actionPerformed()
+          + filaSeleccionada()
+          - cargarElementos()
+          - initComponents()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace ficheros {
+      class capaInterfaz.ficheros.ManejadorFichero {
+          - escritor : BufferedWriter
+          - lector : BufferedReader
+          + Carga()
+          + GuardarFicheroCSVConsultaCalificaciones()
+          + GuardarFicheroConsultaAlumnos()
+          + GuardarFicheroConsultaCalificaciones()
+          + GuardarFicheroConsultaGruposPracticas()
+          + GuardarFicheroConsultaHistoricoAlumnos()
+          + GuardarFicheroConsultaProfesores()
+          + ManejadorFichero()
+          - noEsLetra()
+          - noEsNumero()
+          - obtenerCaracterSeparador()
+      }
+    }
+  }
+  
+
+  capaInterfaz.ficheros.ActionListenerCargarTxtAlumnos o-- capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero : panel
+  capaInterfaz.ficheros.ActionListenerGuardarCSVCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarCSVCalificaciones o-- capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones : panelResultadoConsultarCalificaciones
+  capaInterfaz.ficheros.ActionListenerGuardarTxtAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtAlumnos o-- capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos : panelResultadoConsultarAlumnos
+  capaInterfaz.ficheros.ActionListenerGuardarTxtCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtCalificaciones o-- capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones : panelResultadoConsultarCalificaciones
+  capaInterfaz.ficheros.ActionListenerGuardarTxtGrupoPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtGrupoPracticas o-- capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas : panelResultadoConsultaGruposPracticas
+  capaInterfaz.ficheros.ActionListenerGuardarTxtHistoricoAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtHistoricoAlumnos o-- capaInterfaz.MenuHistoricoAlumnos.PanelResultadoConsultarHistoricoAlumnos : panelResultadoConsultarHistoricoAlumnos
+  capaInterfaz.ficheros.ActionListenerGuardarTxtProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.ActionListenerGuardarTxtProfesores o-- capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores : panelResultadoConsultarProfesores
+  capaInterfaz.ficheros.FrameEscogerCaracterSeparador .up.|> java.awt.event.ActionListener
+  capaInterfaz.ficheros.FrameEscogerCaracterSeparador -up-|> javax.swing.JDialog
+  capaInterfaz.ficheros.FrameEscogerCaracterSeparador o-- capaInterfaz.JButtonOp : botonOK
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

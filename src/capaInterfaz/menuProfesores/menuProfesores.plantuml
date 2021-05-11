@@ -1,0 +1,229 @@
+@startuml
+
+title __MENUPROFESORES's Class Diagram__\n
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuAltaProfesores {
+          {static} - ALTA_PROFESOR : int
+          {static} - MENU_PRINCIPAL : int
+          {static} - MENU_PROFESORES : int
+          - introduzca_apellidos : JTextField
+          - introduzca_grupo_clase1 : JTextField
+          - introduzca_grupo_clase2 : JTextField
+          - introduzca_nombre : JTextField
+          + PanelMenuAltaProfesores()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuBajaProfesores {
+          {static} - LISTADO_BAJA_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          {static} - MENU_PROFESORES : int
+          - campo_apellidos : JTextField
+          - campo_grupo_clase : JTextField
+          - campo_nombre : JTextField
+          + PanelMenuBajaProfesores()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuConsultarProfesores {
+          {static} - LISTADO_CONSULTAR_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          {static} - MENU_PROFESORES : int
+          - introduzca_apellidos : JTextField
+          - introduzca_grupo_clase : JTextField
+          - introduzca_nombre : JTextField
+          + PanelMenuConsultarProfesores()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuModificarProfesores {
+          {static} - LISTADO_MODIFICAR_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          {static} - MENU_PROFESORES : int
+          - campo_apellidos : JTextField
+          - campo_grupo_clase : JTextField
+          - campo_nombre : JTextField
+          + PanelMenuModificarProfesores()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelMenuProfesores {
+          {static} - MENU_ALTA_PROFESORES : int
+          {static} - MENU_BAJA_PROFESORES : int
+          {static} - MENU_CONSULTAR_PROFESORES : int
+          {static} - MENU_MODIFICAR_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          + PanelMenuProfesores()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelResultadoBajaProfesores {
+          {static} - BORRAR_PROFESOR : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_BAJA_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayApellidos : ArrayList<JTextField>
+          - arrayCodProfesor : ArrayList<Integer>
+          - arrayGrupoclase1 : ArrayList<JTextField>
+          - arrayGrupoclase2 : ArrayList<JTextField>
+          - arrayNombre : ArrayList<JTextField>
+          - arrayradio : ArrayList<JRadioButton>
+          - grupoRadios : ButtonGroup
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoProfesor>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + BorrarFilaSeleccionada()
+          + PanelResultadoBajaProfesores()
+          + actionPerformed()
+          + filaSeleccionada()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+          - noEstaVacio()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores {
+          {static} - GENERAR_TXT : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_CONSULTAR_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayApellidos : ArrayList<JTextField>
+          - arrayCodProfesor : ArrayList<Integer>
+          - arrayGrupoclase1 : ArrayList<JTextField>
+          - arrayGrupoclase2 : ArrayList<JTextField>
+          - arrayNombre : ArrayList<JTextField>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoProfesor>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoConsultarProfesores()
+          + actionPerformed()
+          + getArrayApellidos()
+          + getArrayGrupoClase1()
+          + getArrayGrupoClase2()
+          + getArrayNombres()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+          - noEstaVacio()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuProfesores {
+      class capaInterfaz.menuProfesores.PanelResultadoModificarProfesores {
+          {static} - GUARDAR_MODIFICACIONES_PROFESORES : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_MODIFICAR_PROFESORES : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayApellidos : ArrayList<JTextField>
+          - arrayCodProfesor : ArrayList<Integer>
+          - arrayGrupoclase1 : ArrayList<JTextField>
+          - arrayGrupoclase2 : ArrayList<JTextField>
+          - arrayNombre : ArrayList<JTextField>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoProfesor>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoModificarProfesores()
+          + actionPerformed()
+          + getArrayApellidos()
+          + getArrayGrupoClase1()
+          + getArrayGrupoClase2()
+          + getArrayNombres()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+          - noEstaVacio()
+      }
+    }
+  }
+  
+
+  capaInterfaz.menuProfesores.PanelMenuAltaProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuAltaProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuBajaProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuBajaProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuConsultarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuConsultarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuModificarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuModificarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelMenuProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelMenuProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuProfesores.PanelResultadoBajaProfesores o-- capaInterfaz.JButtonOp : botonDelete
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuProfesores.PanelResultadoConsultarProfesores o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores -up-|> javax.swing.JPanel
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuProfesores.PanelResultadoModificarProfesores o-- capaInterfaz.JButtonOp : botonSaveChanges
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

@@ -1,0 +1,210 @@
+@startuml
+
+title __MENUCALIFICACIONES's Class Diagram__\n
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelMenuCalificaciones {
+          {static} - MENU_CONSULTAR_CALIFICACIONES : int
+          {static} - MENU_MODIFICAR_CALIFICACIONES : int
+          {static} - MENU_PRINCIPAL : int
+          + PanelMenuCalificaciones()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelMenuConsultarCalificaciones {
+          {static} - LISTADO_CONSULTAR_CALIFICACIONES : int
+          {static} - MENU_CALIFICACIONES : int
+          {static} - MENU_PRINCIPAL : int
+          - introduzca_convocatoria : JTextField
+          - introduzca_dni : JTextField
+          - introduzca_grupo : JTextField
+          - introduzca_n_mat : JTextField
+          + PanelMenuConsultarCalificaciones()
+          + actionPerformed()
+          + estaVacio()
+          + noEstaVacio()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelMenuModificarCalificaciones {
+          {static} - LISTADO_MODIFICAR_CALIFICACIONES : int
+          {static} - MENU_CALIFICACIONES : int
+          {static} - MENU_PRINCIPAL : int
+          - introduzca_convocatoria : JTextField
+          - introduzca_dni : JTextField
+          - introduzca_grupo : JTextField
+          - introduzca_n_mat : JTextField
+          + PanelMenuModificarCalificaciones()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones {
+          {static} - GENERAR_CSV : int
+          {static} - GENERAR_TXT : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_CONSULTAR_CALIFICACIONES : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayAlumno : ArrayList<JTextField>
+          - arrayConvocatoria : ArrayList<JTextField>
+          - arrayCurso : ArrayList<JTextField>
+          - arrayDniAlumno : ArrayList<JTextField>
+          - arrayEvC : ArrayList<JTextField>
+          - arrayGrupoClase : ArrayList<JTextField>
+          - arrayNota_EvC : ArrayList<JTextField>
+          - arrayNota_Ex : ArrayList<JTextField>
+          - arrayNota_Final : ArrayList<JTextField>
+          - arrayNota_P1 : ArrayList<JTextField>
+          - arrayNota_P2 : ArrayList<JTextField>
+          - arrayNota_P3 : ArrayList<JTextField>
+          - arrayNota_P4 : ArrayList<JTextField>
+          - arrayNota_Pr : ArrayList<JTextField>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoEvaluacion>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoConsultarCalificaciones()
+          + actionPerformed()
+          + getArrayAlumno()
+          + getArrayConvocatoria()
+          + getArrayCurso()
+          + getArrayDniAlumno()
+          + getArrayEvC()
+          + getArrayNota_EvC()
+          + getArrayNota_Ex()
+          + getArrayNota_Final()
+          + getArrayNota_P1()
+          + getArrayNota_P2()
+          + getArrayNota_P3()
+          + getArrayNota_P4()
+          + getArrayNota_Pr()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuCalificaciones {
+      class capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones {
+          {static} - GUARDAR_MODIFICACIONES_CALIFICACIONES : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_MODIFICAR_CALIFICACIONES : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayAlumno : ArrayList<JTextField>
+          - arrayCodEvaluacion : ArrayList<Integer>
+          - arrayCodExamen : ArrayList<JTextField>
+          - arrayCodPractica : ArrayList<JTextField>
+          - arrayConvocatoria : ArrayList<JTextField>
+          - arrayCurso : ArrayList<JTextField>
+          - arrayDniAlumno : ArrayList<JTextField>
+          - arrayEvC : ArrayList<JTextField>
+          - arrayExConvalidado : ArrayList<Boolean>
+          - arrayGrupoClase : ArrayList<JTextField>
+          - arrayNota_EvC : ArrayList<JTextField>
+          - arrayNota_Ex : ArrayList<JTextField>
+          - arrayNota_Final : ArrayList<JTextField>
+          - arrayNota_P1 : ArrayList<JTextField>
+          - arrayNota_P1Antigua : ArrayList<JTextField>
+          - arrayNota_P2 : ArrayList<JTextField>
+          - arrayNota_P2Antigua : ArrayList<JTextField>
+          - arrayNota_P3 : ArrayList<JTextField>
+          - arrayNota_P3Antigua : ArrayList<JTextField>
+          - arrayNota_P4 : ArrayList<JTextField>
+          - arrayNota_P4Antigua : ArrayList<JTextField>
+          - arrayNota_Pr : ArrayList<JTextField>
+          - arrayNota_PrAntigua : ArrayList<JTextField>
+          - arrayPrConvalidada : ArrayList<Boolean>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoEvaluacion>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoModificarCalificaciones()
+          + actionPerformed()
+          + getArrayAlumno()
+          + getArrayCodEv()
+          + getArrayCodExamen()
+          + getArrayCodPractica()
+          + getArrayConvocatoria()
+          + getArrayCurso()
+          + getArrayDniAlumno()
+          + getArrayEvC()
+          + getArrayEx_Convalidado()
+          + getArrayNota_EvC()
+          + getArrayNota_Ex()
+          + getArrayNota_Final()
+          + getArrayNota_P1()
+          + getArrayNota_P1Antigua()
+          + getArrayNota_P2()
+          + getArrayNota_P2Antigua()
+          + getArrayNota_P3()
+          + getArrayNota_P3Antigua()
+          + getArrayNota_P4()
+          + getArrayNota_P4Antigua()
+          + getArrayNota_Pr()
+          + getArrayNota_PrAntigua()
+          + getArrayPr_Convalidada()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  capaInterfaz.menuCalificaciones.PanelMenuCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelMenuCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelMenuConsultarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelMenuConsultarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelMenuModificarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelMenuModificarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonGenerarCSV
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonHome
+  capaInterfaz.menuCalificaciones.PanelResultadoConsultarCalificaciones o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones -up-|> javax.swing.JPanel
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones o-- capaInterfaz.JButtonOp : botonHome
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuCalificaciones.PanelResultadoModificarCalificaciones o-- capaInterfaz.JButtonOp : botonSaveChanges
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
