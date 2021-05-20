@@ -1,0 +1,311 @@
+@startuml
+
+title __MENUGRUPOSPRACTICAS's Class Diagram__\n
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.FrameEscogerTutor {
+          {static} - CANCELAR : int
+          {static} - ESCOGER_TUTOR : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          - arrayapellidos : ArrayList<JTextField>
+          - arraycod : ArrayList<JTextField>
+          - arraynombre : ArrayList<JTextField>
+          - arrayradio : ArrayList<JRadioButton>
+          - grupoRadios : ButtonGroup
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoProfesor>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + FrameEscogerTutor()
+          + actionPerformed()
+          + filaSeleccionada()
+          + getArrayApellidos()
+          + getArrayCodTutor()
+          + getArrayNombres()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuAltaGruposPracticas {
+          {static} + cod_tutor : int
+          {static} - DAR_ALTA_GRUPO_PRACTICA : int
+          {static} - FRAME_ESCOGER_TUTOR : int
+          {static} - MENU_GRUPOS_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_cod_grupo : JTextField
+          - campo_dni_alumno1 : JTextField
+          - campo_dni_alumno2 : JTextField
+          - campo_nota : JTextField
+          - campo_tutor : JTextField
+          {static} - tutor : Profesor
+          + PanelMenuAltaGruposPracticas()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuBajaGruposPracticas {
+          {static} - LISTADO_BAJA_GRUPO_PRACTICAS : int
+          {static} - MENU_GRUPOS_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_codigo_grupo : JTextField
+          + PanelMenuBajaGruposPracticas()
+          + actionPerformed()
+          - cargarElementos()
+          - estaVacio()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuConsultarGruposPracticas {
+          {static} + cod_tutor : int
+          {static} - FRAME_ESCOGER_TUTOR : int
+          {static} - LISTADO_CONSULTAR_GRUPOS_PRACTICAS : int
+          {static} - MENU_GRUPOS_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_cod_grupo : JTextField
+          - campo_dni_alumno : JTextField
+          - campo_tutor : JTextField
+          {static} - tutor : Profesor
+          + PanelMenuConsultarGruposPracticas()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuGruposPracticas {
+          {static} - MENU_ALTA_GRUPO_PRACTICA : int
+          {static} - MENU_BAJA_GRUPO_PRACTICA : int
+          {static} - MENU_CONSULTAR_GRUPO_PRACTICA : int
+          {static} - MENU_MODIFICAR_GRUPO_PRACTICA : int
+          {static} - MENU_PRINCIPAL : int
+          + PanelMenuGruposPracticas()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelMenuModificarGruposPracticas {
+          {static} + cod_tutor : int
+          {static} - FRAME_ESCOGER_TUTOR : int
+          {static} - LISTADO_MODIFICAR_GRUPOS_PRACTICAS : int
+          {static} - MENU_GRUPOS_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_cod_grupo : JTextField
+          - campo_dni_alumno : JTextField
+          - campo_tutor : JTextField
+          {static} - tutor : Profesor
+          + PanelMenuModificarGruposPracticas()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas {
+          {static} - BORRAR_GRUPO_PRACTICAS : int
+          - INCREMENTOY : int
+          {static} - MENU_BAJA_GRUPO_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayAlumno1 : ArrayList<JTextField>
+          - arrayAlumno2 : ArrayList<JTextField>
+          - arrayDniAlumno1 : ArrayList<JTextField>
+          - arrayDniAlumno2 : ArrayList<JTextField>
+          - arrayTutor : ArrayList<JTextField>
+          - array_nota : ArrayList<JTextField>
+          - arraygrupo_practicas : ArrayList<JTextField>
+          - arrayradio : ArrayList<JRadioButton>
+          - grupoRadios : ButtonGroup
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoGrupoPractica>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + BorrarFilaSeleccionada()
+          + PanelResultadoBajaGrupoPracticas()
+          + actionPerformed()
+          + filaSeleccionada()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas {
+          {static} - GENERAR_TXT : int
+          - INCREMENTOY : int
+          {static} - MENU_CONSULTAR_GRUPO_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayAlumno1 : ArrayList<JTextField>
+          - arrayAlumno2 : ArrayList<JTextField>
+          - arrayDniAlumno1 : ArrayList<JTextField>
+          - arrayDniAlumno2 : ArrayList<JTextField>
+          - arrayTutor : ArrayList<JTextField>
+          - array_nota : ArrayList<JTextField>
+          - arraygrupo_practicas : ArrayList<JTextField>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoGrupoPractica>
+          {static} - serialVersionUID : long
+          - y : int
+          + PanelResultadoConsultaGruposPracticas()
+          + actionPerformed()
+          + getArrayDniAlumno1()
+          + getArrayDniAlumno2()
+          + getArrayGruposPracticas()
+          + getArrayNombreYApellidosAlumno1()
+          + getArrayNombreYApellidosAlumno2()
+          + getArrayNotas()
+          + getArrayTutores()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor {
+          {static} - CANCELAR : int
+          {static} - ESCOGER_TUTOR : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          - arrayapellidos : ArrayList<JTextField>
+          - arraycod : ArrayList<JTextField>
+          - arraynombre : ArrayList<JTextField>
+          - arrayradio : ArrayList<JRadioButton>
+          - grupoRadios : ButtonGroup
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoProfesor>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoEscogerTutor()
+          + actionPerformed()
+          + filaSeleccionada()
+          + getArrayApellidos()
+          + getArrayCodTutor()
+          + getArrayNombres()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuGruposPracticas {
+      class capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas {
+          {static} - GUARDAR_MODIFICACIONES_GRUPOS_PRACTICAS : int
+          - INCREMENTOY : int
+          {static} - MENU_MODIFICAR_GRUPO_PRACTICAS : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayAlumno1 : ArrayList<JTextField>
+          - arrayAlumno2 : ArrayList<JTextField>
+          - arrayDniAlumno1 : ArrayList<JTextField>
+          - arrayDniAlumno2 : ArrayList<JTextField>
+          - arrayTutor : ArrayList<JTextField>
+          - array_nota : ArrayList<JTextField>
+          - arraygrupo_practicas : ArrayList<JTextField>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoGrupoPractica>
+          {static} - serialVersionUID : long
+          - y : int
+          + PanelResultadoModificarGruposPracticas()
+          + actionPerformed()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor -up-|> javax.swing.JDialog
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor o-- capaInterfaz.JButtonOp : botonChoose
+  capaInterfaz.menuGruposPracticas.FrameEscogerTutor o-- capaLogicaNegocio.Profesor : tutor
+  capaInterfaz.menuGruposPracticas.PanelMenuAltaGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuAltaGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuBajaGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuBajaGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuConsultarGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuConsultarGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelMenuModificarGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelMenuModificarGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.PanelResultadoBajaGrupoPracticas o-- capaInterfaz.JButtonOp : botonDelete
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas o-- capaInterfaz.JButtonOp : botonGenerarTxt
+  capaInterfaz.menuGruposPracticas.PanelResultadoConsultaGruposPracticas o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor o-- capaInterfaz.JButtonOp : botonChoose
+  capaInterfaz.menuGruposPracticas.PanelResultadoEscogerTutor o-- capaLogicaNegocio.Profesor : tutor
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas -up-|> javax.swing.JPanel
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuGruposPracticas.PanelResultadoModificarGruposPracticas o-- capaInterfaz.JButtonOp : botonSaveChanges
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

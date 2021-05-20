@@ -1,0 +1,282 @@
+@startuml
+
+title __MENUALUMNOS's Class Diagram__\n
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.FrameSeleccionarFichero {
+          - jFileChooser1 : JFileChooser
+          + FrameSeleccionarFichero()
+          - initComponents()
+          - jFileChooser1ActionPerformed()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAltaAlumnos {
+          {static} - MENU_ALTA_ALUMNOS_DESDE_FICHERO : int
+          {static} - MENU_ALTA_ALUMNOS_INDIVIDUAL : int
+          {static} - MENU_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          + PanelMenuAltaAlumnos()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero {
+          {static} + strFilePath : String
+          {static} - FRAME_SELECCIONAR_FICHERO : int
+          {static} - MENU_ALTA_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          {static} - REALIZAR_ALTA_MASIVA : int
+          - campo_seleccionar_fichero : JTextField
+          + PanelMenuAltaAlumnosDesdeFichero()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosIndividual {
+          {static} - ALTA_ALUMNO : int
+          {static} - MENU_ALTA_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_apellidos : JTextField
+          - campo_dni : JTextField
+          - campo_grupo_clase : JTextField
+          - campo_n_mat : JTextField
+          - campo_nombre : JTextField
+          + PanelMenuAltaAlumnosIndividual()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuAlumnos {
+          {static} - MENU_ALTA_ALUMNOS : int
+          {static} - MENU_BAJA_ALUMNOS : int
+          {static} - MENU_CONSULTAR_ALUMNOS : int
+          {static} - MENU_MODIFICAR_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          + PanelMenuAlumnos()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuBajaAlumnos {
+          {static} - LISTADO_BAJA_ALUMNOS : int
+          {static} - MENU_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_dni : JTextField
+          - campo_n_mat : JTextField
+          + PanelMenuBajaAlumnos()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuConsultarAlumnos {
+          {static} - LISTADO_CONSULTAR_ALUMNOS : int
+          {static} - MENU_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_dni_alumno : JTextField
+          - campo_grupo_clase : JTextField
+          - campo_n_mat : JTextField
+          + PanelMenuConsultarAlumnos()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelMenuModificarAlumnos {
+          {static} - LISTADO_MODIFICAR_ALUMNOS : int
+          {static} - MENU_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - campo_dni_alumno : JTextField
+          - campo_grupo_clase : JTextField
+          - campo_n_mat : JTextField
+          + PanelMenuModificarAlumnos()
+          + actionPerformed()
+          - cargarElementos()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos {
+          {static} - BORRAR_ALUMNO : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_BAJA_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayapellidos : ArrayList<JTextField>
+          - arraydni : ArrayList<JTextField>
+          - arraygrupo_clase : ArrayList<JTextField>
+          - arrayn_mat : ArrayList<JTextField>
+          - arraynombre : ArrayList<JTextField>
+          - arrayradio : ArrayList<JRadioButton>
+          - grupoRadios : ButtonGroup
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoAlumno>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + BorrarFilaSeleccionada()
+          + PanelResultadoBajaAlumnos()
+          + actionPerformed()
+          + filaSeleccionada()
+          + getArrayApellidos()
+          + getArrayDNI()
+          + getArrayN_Mat()
+          + getArrayNombres()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos {
+          {static} - GENERAR_TXT : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_CONSULTAR_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayapellidos : ArrayList<JTextField>
+          - arraydni : ArrayList<JTextField>
+          - arraygrupo_clase : ArrayList<JTextField>
+          - arrayn_mat : ArrayList<JTextField>
+          - arraynombre : ArrayList<JTextField>
+          - botonGenerarTxt : JButton
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoAlumno>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoConsultarAlumnos()
+          + actionPerformed()
+          + getArrayApellidos()
+          + getArrayDNI()
+          + getArrayGrupoClase()
+          + getArrayN_Mat()
+          + getArrayNombres()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  namespace capaInterfaz {
+    namespace menuAlumnos {
+      class capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos {
+          {static} - GENERAR_TXT : int
+          {static} - GUARDAR_MODIFICACIONES_ALUMNOS : int
+          - INCREMENTOX : int
+          - INCREMENTOY : int
+          {static} - MENU_MODIFICAR_ALUMNOS : int
+          {static} - MENU_PRINCIPAL : int
+          - arrayapellidos : ArrayList<JTextField>
+          - arraydni : ArrayList<JTextField>
+          - arraygrupo_clase : ArrayList<JTextField>
+          - arrayn_mat : ArrayList<JTextField>
+          - arraynombre : ArrayList<JTextField>
+          - no_resul : JLabel
+          - resultado_consulta : List<ListadoAlumno>
+          {static} - serialVersionUID : long
+          - x : int
+          - y : int
+          + PanelResultadoModificarAlumnos()
+          + actionPerformed()
+          + getArrayApellidos()
+          + getArrayDNI()
+          + getArrayGrupoClase()
+          + getArrayN_Mat()
+          + getArrayNombres()
+          + mostrarResultados()
+          + resetear()
+          - aniadir()
+          - aumentarTamanio()
+          - cargarElementos()
+          - modificarBoton()
+      }
+    }
+  }
+  
+
+  capaInterfaz.menuAlumnos.FrameSeleccionarFichero -up-|> javax.swing.JFrame
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosDesdeFichero -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosIndividual .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAltaAlumnosIndividual -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuBajaAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuBajaAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuConsultarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuConsultarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelMenuModificarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelMenuModificarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuAlumnos.PanelResultadoBajaAlumnos o-- capaInterfaz.JButtonOp : botonDelete
+  capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoConsultarAlumnos o-- capaInterfaz.JButtonOp : botonOK
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos .up.|> java.awt.event.ActionListener
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos -up-|> javax.swing.JPanel
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos o-- capaInterfaz.JButtonOp : botonBack
+  capaInterfaz.menuAlumnos.PanelResultadoModificarAlumnos o-- capaInterfaz.JButtonOp : botonSaveChanges
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

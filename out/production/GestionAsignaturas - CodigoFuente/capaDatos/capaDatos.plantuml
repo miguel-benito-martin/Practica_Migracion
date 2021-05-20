@@ -1,0 +1,221 @@
+@startuml
+
+title __CAPADATOS's Class Diagram__\n
+
+  namespace capaDatos {
+    class capaDatos.ControladorAlumno {
+        + ControladorAlumno()
+        + actualizarAlumno()
+        + cambioAConvocatoriaExtraordinaria()
+        + darAltaAlumnoConvocatoriaExtraordinaria()
+        + darAltaAlumnoConvocatoriaOrdinaria()
+        + darBajaAlumno()
+        + estaDadoDeAlta()
+        + estaDadoDeAlta()
+        + estaDadoDeAltaEnCursoActual()
+        + intertarEnTablaAlumno()
+        + noEstaDadoDeAlta()
+        + numMatriculaEstaDadaDeAlta()
+        + numMatriculaEstaDadaDeAltaEnCursoActual()
+        + obtenerApellidosAlumno()
+        + obtenerNombreAlumno()
+        + obtenerNumMatriculaAlumno()
+        + realizarConsultaAlumno()
+        + realizarConsultaHistoricoAlumno()
+        - borrarEnTablaAlumno()
+        - noEstaVacio()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorConvocatoria {
+        {static} - dao : ControladorConvocatoria
+        + cambioConvocatoria()
+        + recuperarConvocatoriaActual()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorCurso {
+        {static} - dao : ControladorCurso
+        + ControladorCurso()
+        + desactivarCursoActual()
+        + eliminarCurso()
+        + insertarEnTablaCurso()
+        + nuevoCursoActual()
+        + recuperarCursoActual()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorEvaluacion {
+        + ControladorEvaluacion()
+        + actualizarNotasEvaluacion()
+        + actualizarNotasEvaluaciones()
+        + actualizarPracticaEnTablaEvaluacion()
+        + alumnoTieneGrupoPractica()
+        + borrarEnTablaEvaluacion()
+        + borrarGrupoPracticaEnTablaEvaluacion()
+        + eliminarEvaluacionesConvocatoriaActual()
+        + estaDadaDeAlta()
+        + estaRegistradoGrupoPractica()
+        + intertarEnTablaEvaluacion()
+        + noEstaVacio()
+        + obtenerCodExamenAprobado()
+        + obtenerCodPracticaAprobada()
+        + obtenerNotaPiExamen()
+        + obtenerNotaPractica()
+        + realizarConsultarEvaluacion()
+        + recuperarUltimoCodEvaluacion()
+        + tieneExamenAprobado()
+        + tienePracticaAprobada()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorExamen {
+        + ControladorExamen()
+        + bajaCodExamenConvocatoriaActual()
+        + darAltaNuevoCodExamen()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorGrupoClase {
+        + ControladorGrupoClase()
+        + darAltaGrupoClase()
+        + estaDadoDeAlta()
+        + insertarEnTablaGrupoClase()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorGrupoPractica {
+        + ControladorGrupoPractica()
+        + actualizarGrupoPracticas()
+        + actualizarGruposPracticas()
+        + darAltaGrupoPractica()
+        + darBajaGrupoPractica()
+        + desactivarGruposPracticas()
+        + noEstaDadoDeAlta()
+        + noEstaDadoDeAlta()
+        + reactivarGruposPracticasEnUsoEnConvocatoriaActual()
+        + realizarConsultaGrupoPractica()
+        - actualizarRegistrosAlumnoEnGrupoPracticas()
+        - actualizarRegistrosNuevosGrupoPracticas()
+        - borrarRegistrosAntiguosGrupoPracticas()
+        - desactivarGrupoPractica()
+        - estaActivo()
+        - insertarEnTablaGrupoPractica()
+        - noEstaVacio()
+        - reactivarGrupoPractica()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorMatricula {
+        + ControladorMatricula()
+        + borrarEnTablaMatricula()
+        + eliminarMatriculasCursoActual()
+        + estaDadaDeAlta()
+        + insertarEnTablaMatricula()
+        + recuperarUltimoCodMatricula()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorPractica {
+        + ControladorPractica()
+        + bajaCodPracticaConvocatoriaActual()
+        + darAltaNuevoCodPractica()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorProfesor {
+        + ControladorProfesor()
+        + actualizarProfesor()
+        + actualizarProfesores()
+        + darAltaProfesor()
+        + darBajaProfesor()
+        + eliminarImparticionesCursoActual()
+        + estaDadoDeAlta()
+        + insertarEnTablaImparte()
+        + insertarEnTablaProfesor()
+        + obtenerApellidosProfesor()
+        + obtenerCodigoProfesor()
+        + obtenerNombreProfesor()
+        + reactivarProfesoresConImparteEnConvocatoriaActual()
+        + reactivarProfesoresConTutoriasEnConvocatoriaActual()
+        + realizarConsultaProfesor()
+        + recuperarUltimoCodProfesor()
+        + validarGrupoClase()
+        - anyadirProfesorSinClases()
+        - anyadirProfesoresConClases()
+        - borrarEnTablaImparte()
+        - borrarEnTablaProfesor()
+        - borrarEnTablaTutoria()
+        - desactivarProfesor()
+        - estaRegistradoEnImparte()
+        - estaRegistradoEnImparteActualmente()
+        - estaRegistradoEnTutoria()
+        - estaRegistradoEnTutoriaActualmente()
+        - estaVacio()
+        - noEstaVacio()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.ControladorTutoria {
+        + ControladorTutoria()
+        + borrarTutoriaGrupoPractica()
+        + eliminarTutoriasConvocatoriaActual()
+        + estaRegistradoGrupoPractica()
+        + insertarEnTablaTutoria()
+        + recuperarUltimoCodTutoria()
+        + tieneTutorias()
+    }
+  }
+  
+
+  namespace capaDatos {
+    class capaDatos.DataAccessObject {
+        {static} + PASS : String
+        {static} + URL : String
+        {static} + USER : String
+        {static} - DRIVER : String
+        - connection : Connection
+        {static} - dataAccessObject : DataAccessObject
+        - statement : PreparedStatement
+        + actualizar()
+        + close()
+        {static} + getDataAccessObjectConnected()
+        + getPreparedStatement()
+        + rollback()
+        - DataAccessObject()
+        - closeConnection()
+        - connect()
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
